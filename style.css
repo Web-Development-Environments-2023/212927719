@@ -6,7 +6,6 @@
 }
 
 body {
-	/* background: radial-gradient(#000000,#6f6c7d); */
 	background: linear-gradient(#343333, #000000, #343333);
 	text-align: center;
 }
@@ -28,7 +27,8 @@ nav {
 
 }
 
-.btn, select {
+.btn,
+select {
 	background-color: #37383f;
 	color: #ffffff;
 	padding: 6% 12%;
@@ -46,7 +46,8 @@ nav a {
 }
 
 nav a:hover,
-.btn:hover, select:hover {
+.btn:hover,
+select:hover {
 	background-image: url('https://scottyzen.sirv.com/Images/v/button.png');
 	background-size: 100% 100%;
 	color: #27262c;
@@ -103,7 +104,7 @@ section h1 {
 
 
 /* List element */
-li {
+.card__theme li {
 	display: flex;
 	align-items: center;
 	padding: 12px 0;
@@ -114,7 +115,7 @@ li {
 
 
 /* Element counter */
-li::before {
+.card__theme li::before {
 	content: counters(index, ".", decimal-leading-zero);
 	font-size: 4rem;
 	text-align: right;
@@ -424,10 +425,85 @@ only screen and (hover: none) {
 	display: flex;
 	flex-wrap: wrap;
 	z-index: 1;
-  }
+}
 
-  iframe{
+iframe {
 	width: 100%;
 	height: 100%;
-  }
+}
 
+.fb-like {
+	background-color: #ffffff;
+	border-radius: 8px;
+	padding: 16px;
+}
+
+
+
+
+
+  main {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 40px 20px;
+  }
+  
+  main section {
+	margin-bottom: 60px;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  h2 {
+	font-size: 36px;
+	margin: 0;
+	background-color: #444;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+  }
+  
+  p {
+	font-size: 24px;
+	line-height: 1.5;
+	padding: 20px;
+	color: #666;
+  }
+  
+  ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #eee;
+	padding: 20px;
+  }
+  
+  li {
+	font-size: 20px;
+	color: #333;
+	text-align: center;
+  }
+  
+  /* Responsive Styles */
+  
+  @media screen and (max-width: 768px) {
+	h1 {
+	  font-size: 36px;
+	}
+  
+	h2 {
+	  font-size: 28px;
+	}
+  
+	p {
+	  font-size: 20px;
+	}
+  
+	ul {
+	  font-size: 20px;
+	}
+  }

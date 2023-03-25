@@ -2,12 +2,18 @@
 <html>
 
 <head>
+  <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
 <body>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v16.0"
+    nonce="SyPYrqoo"></script>
   <div>
     <nav>
+      <img src="https://ted-conferences-speaker-photos-production.s3.amazonaws.com/yoa4pm3vyerco6hqbhjxly3bf41d"
+        style="width: 4%; height: auto;">
       <a href="#about">About Me</a>
       <a href="#photos">My Photos</a>
       <a href="#playlist">My Playlist</a>
@@ -347,39 +353,16 @@
       <h1>give me a like</h1>
       <hr class="sep" style="width: 45%;" />
 
-      <div class="fb-like" data-href="https://web-development-environments-2023.github.io/212927719/" data-width="200px"
-      data-layout="" data-action="" data-size="" data-share="false"></div>
+      <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="100" data-layout=""
+        data-action="" data-size="" data-share="false"></div>
 
-      <div id="fb-root"></div>
-      <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v16.0"
-        nonce="SyPYrqoo"></script>
-      
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
     </section>
 
     <section id="qrcoder" class="section">
       <h1>scan my code</h1>
       <hr class="sep" style="width: 45%;" />
       <img src="qr-code.png" width="30%" height="30%" style="border-radius: 18%;" />
-      
+
       <br />
     </section>
 
@@ -387,23 +370,52 @@
       <h1>ans</h1>
       <hr class="sep" style="width: 10%;" />
       <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <header id="main-header">
+      </header>
+      <main>
+        <section>
+          <h2>Web1</h2>
+          <p>
+            The first version of the web was static, meaning it only provided
+            users with read-only content. There was no way for users to interact
+            with the web pages, and there were no dynamic elements such as
+            multimedia, animations, or real-time updates.
+          </p>
+          <p>Example Use Case:</p>
+          <ul>
+            <li>A website that displays a catalog of products with pictures and descriptions.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Web2</h2>
+          <p>
+            The second version of the web was interactive and provided users with
+            the ability to create and share content. Social media platforms, blogs,
+            and forums are some examples of Web2 applications. Web2 also introduced
+            technologies such as AJAX, which enabled real-time updates and
+            interactive user interfaces.
+          </p>
+          <p>Example Use Case:</p>
+          <ul>
+            <li>A social media platform such as Facebook that enables users to create profiles, share content, and connect with other users. Users can interact with each other by commenting on posts, liking content, and sharing their own content.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Web3</h2>
+          <p>
+            The third version of the web is decentralized and focused on providing
+            users with greater control over their data and online identities. Web3
+            is built on blockchain technology, enabling users to interact with each
+            other and with applications without intermediaries. Web3 applications
+            include decentralized finance, non-fungible tokens, and decentralized
+            social networks.
+          </p>
+          <p>Example Use Case:</p>
+          <ul>
+            <li>A decentralized finance application such as Uniswap that allows users to trade cryptocurrencies without intermediaries. Users can interact with the application using their cryptocurrency wallets and make trades directly on the blockchain without relying on centralized exchanges. This provides greater control and security for users over their funds.</li>
+          </ul>
+        </section>
+      </main>
       <br />
     </section>
 
@@ -412,36 +424,63 @@
       <hr class="sep" style="width: 35%;" />
 
 
+      <script>
+        function buildMessage() {
+          const body = document.querySelector('#body');
+          const message = document.querySelector('#message');
+          const firstName = document.querySelector('#firstName');
+          const lastName = document.querySelector('#lastName');
+          const email = document.querySelector('#email');
+          const phoneNumber = document.querySelector('#phoneNumber');
+          body.value =
+            "Hi Bill!\n"
+            + `${message.value}\n`
+            + "Thank you very much!\n"
+            + `${firstName.value} ${lastName.value}`
+            + `Email: ${email.value}\n`
+            + `Call me at: ${phoneNumber.value}`;
+        }
+      </script>
 
       <div class="wrapper">
-        <form action="mailto:billGatesOfficial@Microsoft.com" method="post">
+        <form action="mailto:billGatesOfficial@Microsoft.com" onsubmit="buildMessage(); return true;">
           <div class="group">
-            <input type="text" required="required" /><span class="highlight"></span><span class="bar"></span>
-            <label>Name</label>
+            <input type="text" required="required" id="firstName" /><span class="highlight"></span><span
+              class="bar"></span>
+            <label>First Name</label>
           </div>
           <div class="group">
-            <input type="text" required="required" /><span class="highlight"></span><span class="bar"></span>
+            <input type="text" required="required" id="lastName" /><span class="highlight"></span><span
+              class="bar"></span>
             <label>Last Name</label>
           </div>
           <div class="group">
-            <input type="text" required="required" /><span class="highlight"></span><span class="bar"></span>
+            <input type="text" required="required" id="email" /><span class="highlight"></span><span class="bar"></span>
             <label>Email</label>
           </div>
           <div class="group">
-            <input type="number" required="required" /><span class="highlight"></span><span class="bar"></span>
+            <input type="number" required="required" id="phoneNumber" /><span class="highlight"></span><span
+              class="bar"></span>
             <label>Phone Number</label>
+          </div>
+          <div class="group">
+            <input type="text" required="required" name="subject" /><span class="highlight"></span><span
+              class="bar"></span>
+            <label>Subject</label>
           </div>
           <div class="group">
             <textarea id="message" type="textarea" rows="5" required="required"></textarea><span
               class="highlight"></span><span class="bar"></span>
             <label>Message</label>
           </div>
+          <input type="hidden" name="body" id="body" />
           <div class="btn-box">
             <button class="btn btn-submit" type="submit">submit</button>
 
 
             <!-- <div class="custom-select" style="width:200px;"> -->
             <select id="selectEmoji" onchange="addEmoji()">
+              <option value="">Emoji</option>
               <option value="&#x1F602">&#x1F602</option>
               <option value="&#128150">&#128150</option>
               <option value="&#x1F60D">&#x1F60D</option>
@@ -458,6 +497,7 @@
             <script>
               function addEmoji() {
                 document.getElementById("message").value += document.getElementById("selectEmoji").value;
+                document.getElementById("selectEmoji").value = "";
               }
             </script>
 
